@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Chatroom</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="StyleSheet/Style.css" type="text/css">
+  <link rel="stylesheet" href="StyleSheet/Community-Chatroom.css" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <div class="logo-box">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <div class="nav-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='Services.html'">Services</button>
+      </div>
+      <div id="google_translate_element"></div>
+    </div>
+
+    <h2 class="title">Community Chatroom</h2>
+
+    <div class="chatroom-container">
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url('https://th.bing.com/th/id/OIP.KgansTbaNbmreLaXoMUdCQHaHa?rs=1')"></div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">System</div>
+            <div class="msg-info-time">Now</div>
+          </div>
+          <div class="msg-text">Welcome to the Health Community Chatroom!</div>
+        </div>
+      </div>
+
+      <div id="chatBox"></div>
+
+      <div class="dual-inputs">
+        <div class="user-input">
+          <label for="inputBokang">Bokang:</label>
+          <form id="formBokang">
+            <input type="text" id="inputBokang" placeholder="Message as Bokang..." />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+        <div class="user-input">
+          <label for="inputVutomi">Vutomi:</label>
+          <form id="formVutomi">
+            <input type="text" id="inputVutomi" placeholder="Message as Vutomi..." />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="JavaScripts/Community-Chatroom.js"></script>
+
+  <script src="JavaScripts/GoogleLanguageTranslater.js"></script>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  
+  <noscript>Your browser does not support JavaScript</noscript>
+</body>
+</html>

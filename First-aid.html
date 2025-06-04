@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>First Aid Guides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="StyleSheet/First-aid.css" type="text/css">
+   <link rel="stylesheet" href="StyleSheet/Style.css" type="text/css">
+
+
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="top-bar">
+      <div class="logo-box">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+
+      <div class="nav-buttons" id="navButtons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='Services.html'">Services</button>
+      </div>
+
+      <div id="google_translate_element" style="margin-left: 20px;"></div>
+    </div>
+
+    <h2 class="title">First Aid Guides</h2>
+
+    <div class="content-boxes">
+
+      <div class="content-box">
+        <h3>Life-Threatening Emergencies</h3>
+        <button onclick="toggleInstructions('life')">View Instructions</button>
+        <div id="life" class="instructions" data-images='["images/Emergency call.webp","images/CPR.webp","images/wound.jpeg"]'>
+          <ul>
+            <li><strong>Call emergency services immediately (e.g. 112 or 911).</strong></li>
+            <li>Check for breathing and pulse — start CPR if unresponsive.</li>
+            <li>Stop severe bleeding with pressure and elevation.</li>
+            <li>Keep the person still and calm while waiting for help.</li>
+          </ul>
+          <div class="slider"></div>
+        </div>
+      </div>
+
+      <div class="content-box">
+        <h3>Common Injuries &<br> Their Treatment</h3>
+        <button onclick="toggleInstructions('common')">View Instructions</button>
+        <div id="common" class="instructions" data-images='["images/Cooling burn.jpg","images/Applying burn.png","images/rice-method-infographic.jpg"]'>
+          <ul>
+            <li>Clean wounds with clean water and cover with sterile dressing.</li>
+            <li>Use bandages to secure dressings and control bleeding.</li>
+            <li>Splint broken bones to prevent movement.</li>
+            <li>Seek medical attention if injury is severe or worsening.</li>
+          </ul>
+          <div class="slider"></div>
+        </div>
+      </div>
+
+      <div class="content-box">
+        <h3>Burns & Heat-Related Illnesses</h3>
+        <button onclick="toggleInstructions('burns')">View Instructions</button>
+        <div id="burns" class="instructions" data-images='["images/heat exhaustion.jpeg","images/hypothermia blanket cover.jpeg","images/frostbitten fingers.jpg"]'>
+          <ul>
+            <li>Cool burns immediately with running water (at least 10 min).</li>
+            <li>Do not apply ice or greasy substances.</li>
+            <li>For heat stroke, move to shade and cool down.</li>
+            <li>Seek emergency help for severe burns or heat stroke.</li>
+          </ul>
+          <div class="slider"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-nav">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </div>
+
+  </div>
+
+  <script src="JavaScripts/First-aid.js"></script>
+
+  <script src="JavaScripts/GoogleLanguageTranslater.js"></script>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  
+  <noscript>Your browser does not support JavaScript</noscript>
+  
+</body>
+</html>

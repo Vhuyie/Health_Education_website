@@ -1,0 +1,106 @@
+    .chat-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: #ebfbee;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      border-left: 5px solid #38a169;
+      animation: slideFadeIn 1s ease;
+    }
+
+    @keyframes slideFadeIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .chat-log {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #c6f6d5;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 15px;
+    }
+
+    .chat-log p {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .chat-log .user {
+      text-align: right;
+      color: #2b6cb0;
+      font-weight: 600;
+    }
+
+    .chat-log .bot {
+      text-align: left;
+      color: #22543d;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 10px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #38a169;
+      font-size: 1rem;
+    }
+
+    .chat-input button {
+      background: #38a169;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .chat-input button:hover {
+      background: #2f855a;
+    }
+
+    .option-btn {
+      background: #edf2f7;
+      border: 1px solid #cbd5e0;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .option-btn:hover {
+      background: #c6f6d5;
+    }
+
+    .message {
+      margin: 10px 0;
+    }
+
+    .timestamp {
+      font-size: 0.7rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .bot-message {
+      text-align: left;
+      color: #22543d;
+    }
+
+    .user-message {
+      text-align: right;
+      color: #2b6cb0;
+    }

@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Tutorials for Prevention</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="StyleSheet/Video-tutorials.css" type="text/css">
+  <link rel="stylesheet" href="StyleSheet/Style.css" type="text/css">
+
+
+</head>
+<body>
+
+  <div class="wrapper">
+
+    
+    <div class="top-bar">
+      <div class="logo-box">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="nav-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='Services.html'">Services</button>
+      </div>
+     <div id="google_translate_element"></div>
+
+    </div>
+
+    <h2 class="title">Disease Prevention Videos</h2>
+
+    
+    <div class="content-boxes">
+
+      <div class="content-box">
+        <h3>Hand Washing Techniques</h3>
+          <iframe width="100%" height="215" 
+          src="https://www.youtube.com/embed/3PmVJQUCm4E" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+          </iframe>
+      </div>
+
+
+      <div class="content-box">
+        <h3>Preventing Waterborne Diseases</h3>
+          <iframe width="100%" height="215" 
+          src="https://www.youtube.com/embed/ix1BZzWisdg" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+          </iframe>
+      </div>
+
+
+      <div class="content-box">
+        <h3>What is Cholera and How to Avoid It</h3>
+          <iframe width="100%" height="215" 
+          src="https://www.youtube.com/embed/kuliQhjco9g" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+          </iframe>
+      </div>
+
+
+      <div class="content-box">
+        <h3>Staying Healthy with Clean Water</h3>
+          <iframe width="100%" height="215" 
+          src="https://www.youtube.com/embed/Sk0KlvCUiqA"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+          </iframe>
+      </div>
+
+    </div>
+
+    
+<form class="contact-form" action="#" method="post" onsubmit="handleSubmit(event)" novalidate>
+  <label for="fullname">Full Name</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Your full name" required onchange="handleInputChange(event)">
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required onchange="handleInputChange(event)">
+
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" placeholder="Write your message here..." required onchange="handleInputChange(event)"></textarea>
+
+  <label>What health topics are you interested in? (Check all that apply)</label>
+  <div style="margin-bottom: 15px;">
+    <input type="checkbox" id="chkHandwashing" name="topics" value="Handwashing">
+    <label for="chkHandwashing">Hand Washing</label><br>
+    <input type="checkbox" id="chkWaterborne" name="topics" value="Waterborne Diseases">
+    <label for="chkWaterborne">Waterborne Diseases</label><br>
+    <input type="checkbox" id="chkCholera" name="topics" value="Cholera">
+    <label for="chkCholera">Cholera</label>
+  </div>
+
+  <label>Were the videos helpful?</label>
+  <div style="margin-bottom: 15px;">
+    <input type="radio" id="radioYes" name="helpful" value="Yes" required>
+    <label for="radioYes">Yes</label><br>
+    <input type="radio" id="radioNo" name="helpful" value="No">
+    <label for="radioNo">No</label>
+  </div>
+
+  <label for="dropdown">Select your favorite prevention topic</label>
+  <select id="dropdown" name="favorite" required>
+    <option value="">-- Please choose an option --</option>
+    <option value="Handwashing">Hand Washing</option>
+    <option value="Clean Water">Clean Water</option>
+    <option value="Cholera Prevention">Cholera Prevention</option>
+  </select>
+
+  <button type="submit">Send Message</button>
+</form>
+
+
+<p id="formMessage" style="text-align:center; color:#2f855a; font-weight:600; margin-top:10px;"></p>
+
+
+    <div class="bottom-nav">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </div>
+
+  </div>
+  <script src="JavaScripts/Video-tutorials.js"></script>
+
+  <script src="JavaScripts/GoogleLanguageTranslater.js"></script>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  
+  <noscript>Your browser does not support JavaScript</noscript>
+
+</body>
+</html>
+

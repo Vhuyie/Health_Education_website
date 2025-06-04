@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Types of Disease Prevention</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="StyleSheet/Types-of-diseases.css" type="text/css">
+  <link rel="stylesheet" href="StyleSheet/Style.css" type="text/css">
+
+
+</head>
+<body>
+
+  <div class="wrapper">
+
+    
+    <div class="top-bar">
+      <div class="logo-box">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="nav-buttons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='Services.html'">Services</button>
+      </div>
+      <div id="google_translate_element"></div>
+
+    </div>
+
+    <h2 class="title">Types of Disease Prevention</h2>
+
+    
+    <div class="content-boxes">
+      
+      <div class="content-box">
+        <h3>General Disease Prevention</h3>
+        <button class="toggle" onclick="toggleSection(this, 'general')">View Info</button>
+        <div id="general" class="instructions">
+          <ul>
+            <li>Wash hands regularly with soap and water.</li>
+            <li>Maintain proper hygiene and clean environment.</li>
+            <li>Use clean drinking water and eat well-cooked food.</li>
+            <li>Get vaccinated when necessary.</li>
+          </ul>
+          <figure class="slideshow" data-index="0">
+            <img src="images/washing hands.jpeg" alt="Wash hands regularly">
+            <figcaption>Wash hands regularly</figcaption>
+            <img src="images/Clean Environment.avif" alt="Clean environment">
+            <img src="images/vaccination.png" alt="Vaccination">
+            <div class="controls">
+              <button class="pause" onclick="toggleSlideshow(this, true)">Pause</button>
+              <button class="play" onclick="toggleSlideshow(this, false)">Play</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+    
+      <div class="content-box">
+        <h3>Cholera</h3>
+        <button class="toggle" onclick="toggleSection(this, 'cholera')">View Info</button>
+        <div id="cholera" class="instructions">
+          <ul>
+            <li>Drink only safe and treated water.</li>
+            <li>Wash hands with soap before eating and after using the toilet.</li>
+            <li>Avoid raw or undercooked seafood and street food.</li>
+            <li>Use latrines and ensure proper sewage disposal.</li>
+          </ul>
+          <figure class="slideshow" data-index="0">
+            <img src="images/safe water.webp" alt="Drink safe water">
+            <figcaption>Drink safe water</figcaption>
+            <img src="images/washing hands.jpeg" alt="Hand washing">
+            <img src="images/safe food.jpeg" alt="Safe food">
+            <div class="controls">
+              <button class="pause" onclick="toggleSlideshow(this, true)">Pause</button>
+              <button class="play" onclick="toggleSlideshow(this, false)">Play</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+     
+      <div class="content-box">
+        <h3>Poor Sanitation & Waste Disposal</h3>
+        <button class="toggle" onclick="toggleSection(this, 'sanitation')">View Info</button>
+        <div id="sanitation" class="instructions">
+          <ul>
+            <li>Dispose of waste in designated areas or bins.</li>
+            <li>Do not dump waste near water sources.</li>
+            <li>Educate the community on safe sanitation practices.</li>
+            <li>Use toilets and maintain clean facilities.</li>
+          </ul>
+          <figure class="slideshow" data-index="0">
+            <img src="images/dustbin.webp" alt="Use proper waste bins">
+            <figcaption>Use proper waste bins</figcaption>
+            <img src="images/Toilets.jpg" alt="Toilets">
+            <img src="images/education.avif" alt="Education">
+            <div class="controls">
+              <button class="pause" onclick="toggleSlideshow(this, true)">Pause</button>
+              <button class="play" onclick="toggleSlideshow(this, false)">Play</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      
+      <div class="content-box">
+        <h3>Typhoid Fever</h3>
+        <button class="toggle" onclick="toggleSection(this, 'typhoid')">View Info</button>
+        <div id="typhoid" class="instructions">
+          <ul>
+            <li>Boil or treat drinking water.</li>
+            <li>Wash fruits and vegetables before eating.</li>
+            <li>Get vaccinated if in high-risk area.</li>
+            <li>Practice proper hand hygiene consistently.</li>
+          </ul>
+          <figure class="slideshow" data-index="0">
+            <img src="images/Boiling water.jpeg" alt="Boil water before drinking">
+            <figcaption>Boil water before drinking</figcaption>
+            <img src="images/clean food.webp" alt="Clean food">
+            <img src="images/vaccination.png" alt="Vaccination">
+            <div class="controls">
+              <button class="pause" onclick="toggleSlideshow(this, true)">Pause</button>
+              <button class="play" onclick="toggleSlideshow(this, false)">Play</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="JavaScripts/Types-of-diseases.js"></script>
+
+  <script src="JavaScripts/GoogleLanguageTranslater.js"></script>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  
+  <noscript>Your browser does not support JavaScript</noscript> 
+</body>
+</html>

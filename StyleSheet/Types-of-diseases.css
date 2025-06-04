@@ -1,0 +1,123 @@
+
+ #languageSelector {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #38a169;
+      background: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .content-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .content-box {
+      background: #e6fffa;
+      border-radius: 15px;
+      border: 2px solid #c6f6d5;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .content-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+    .content-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(56,161,105,0.3);
+    }
+    .content-box h3 {
+      color: #2f855a;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+    .content-box button.toggle {
+      background: linear-gradient(to right, #38a169, #2f855a);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 8px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .content-box button.toggle:hover {
+      background: linear-gradient(to right, #2f855a, #276749);
+    }
+    
+    .content-box::before {
+      content: "";
+      position: absolute;
+      top: -6px; left: -6px; right: -6px; bottom: -6px;
+      border-radius: 15px;
+      pointer-events: none; z-index: -1;
+      border: 3px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .content-box:hover::before {
+      border-color: #38a169;
+    }
+
+    
+    .instructions {
+      margin-top: 15px;
+      text-align: left;
+      display: none;
+    }
+    .instructions ul {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 0.95rem;
+      color: #2d3748;
+    }
+    .slideshow {
+      margin-top: 10px;
+      position: relative;
+    }
+    .slideshow img {
+      width: 100%;
+      border-radius: 8px;
+      display: none;
+    }
+    .slideshow img:first-child {
+      display: block;
+    }
+    .slideshow figcaption {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 0.85rem;
+      color: #4a5568;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+    .controls button {
+      background: linear-gradient(to right, #2f855a, #276749);
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .controls button.play {
+      display: none;
+    }
+
+    .bottom-nav {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #4a5568;
+    }

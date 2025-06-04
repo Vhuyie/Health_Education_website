@@ -1,0 +1,98 @@
+    .content-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .content-box {
+      background: #ebfbee;
+      border: 3px solid #38a169;
+      border-radius: 20px;
+      padding: 25px 20px 30px;
+      box-shadow: 0 14px 24px rgba(56,161,105,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .content-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 22px 36px rgba(56,161,105,0.35);
+    }
+    .content-box h3 {
+      text-align: center;
+      font-weight: 600;
+      color: #276749;
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+    .content-box button {
+      display: block;
+      margin: 0 auto 15px;
+      padding: 10px 24px;
+      background: linear-gradient(90deg, #38a169, #2f855a);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(56,161,105,0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .content-box button:hover {
+      background: linear-gradient(90deg, #2f855a, #276749);
+      transform: scale(1.05);
+      box-shadow: 0 7px 14px rgba(39,103,73,0.6);
+    }
+    .instructions {
+      background: white;
+      border-radius: 15px;
+      padding: 18px 25px;
+      color: #2d3748;
+      font-size: 1rem;
+      line-height: 1.6;
+      box-shadow: inset 0 0 8px rgba(56,161,105,0.1);
+      display: none;
+    }
+    .instructions ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    .instructions li {
+      margin-bottom: 10px;
+    }
+    .slider {
+      position: relative;
+      margin-top: 15px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(56,161,105,0.25);
+    }
+    .slider img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: none;
+      transition: opacity 0.5s ease;
+    }
+    .slider img.active {
+      display: block;
+      opacity: 1;
+    }
+    .slider-controls {
+      margin-top: 12px;
+      text-align: center;
+    }
+    .slider-controls button {
+      background: #38a169;
+      border: none;
+      color: white;
+      padding: 6px 14px;
+      margin: 0 6px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(56,161,105,0.4);
+    }
+    .slider-controls button:hover {
+      background: #2f855a;
+    }
+    

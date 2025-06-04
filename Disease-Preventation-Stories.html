@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disease Prevention Stories</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="StyleSheet/Scenario.css" type="text/css">
+  <link rel="stylesheet" href="StyleSheet/Style.css" type="text/css">
+
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top-bar">
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Logo" />
+    </div>
+    <div class="nav-buttons" id="navButtons">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='Services.html'">Services</button>
+      </div>
+
+    <div id="google_translate_element" style="margin-bottom: 20px;"></div>
+  </div>
+
+  <h2 class="title">Disease Prevention Stories</h2>
+
+  
+  <div id="homePage" class="active">
+    <div class="content-boxes">
+      <div class="content-box">
+        <h3>Lungile and Safe Water Choices</h3>
+        <p>Learn how Lungile discovers the dangers of drinking dirty water and takes action.</p>
+        <button onclick="beginStory('lungile')">Start Lungile's Story</button>
+      </div>
+      <div class="content-box">
+        <h3>Gontse and Swimming in the River</h3>
+        <p>Follow Gontse and his friends as they learn about safe swimming practices.</p>
+        <button onclick="beginStory('gontse')">Start Gontse's Story</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="servicesPage" class="instructions">
+    <h3>Our Services</h3>
+    <p>We provide educational stories and health awareness content for young learners.</p>
+    <div class="bottom-buttons">
+      <button onclick="showPage('home')">Return to Home Page</button>
+    </div>
+  </div>
+
+  
+  <div id="lungileSteps" class="instructions">
+    <div id="lungileStep1" class="step active">
+      <h3>Hello, what's your name?</h3>
+      <input id="lungileName" class="input-name" placeholder="Enter your name" />
+      <br/><br/>
+      <button onclick="saveName('lungile')">Continue</button>
+    </div>
+    <div id="lungileStep2" class="step">
+      <p><span id="lungileUser"></span> notices people in her village are getting sick with diarrhoea and vomiting. She reads that drinking dirty water can cause cholera.</p>
+      <button onclick="nextStep('lungileStep2', 'lungileStep3')">Next</button>
+    </div>
+    <div id="lungileStep3" class="step">
+      <p>What should <span id="lungileUser2"></span> do?</p>
+      <button onclick="nextStep('lungileStep3', 'lungileStep4')">Take precautions</button>
+      <button onclick="wrongChoice()">Ignore the problem</button>
+    </div>
+    <div id="lungileStep4" class="step">
+      <p>She decides to:</p>
+      <ul>
+        <li>Purify water before drinking.</li>
+        <li>Use tablets, boil or filter water.</li>
+      </ul>
+      <button onclick="nextStep('lungileStep4', 'lungileStep5')">Next</button>
+    </div>
+    <div id="lungileStep5" class="step">
+      <p>Clean water is important to prevent cholera and other diseases.</p>
+      <p id="lungileDate"></p>
+      <button onclick="endStory()">Finish Story</button>
+    </div>
+  </div>
+
+
+  <div id="gontseSteps" class="instructions">
+  <div id="gontseStep1" class="step active">
+    <h3>Hello, what's your name?</h3>
+    <input id="gontseName" class="input-name" placeholder="Enter your name" />
+    <br/><br/>
+    <button onclick="saveName('gontse')">Continue</button>
+  </div>
+  <div id="gontseStep2" class="step">
+    <p><span id="gontseUser"></span> and friends love swimming in the river. But the water is dirty and may contain harmful bacteria.</p>
+    <button onclick="nextStep('gontseStep2', 'gontseStep3')">Next</button>
+  </div>
+  <div id="gontseStep3" class="step">
+    <p>What should <span id="gontseUser2"></span> do?</p>
+    <button onclick="nextStep('gontseStep3', 'gontseStep4')">Swim in clean, safe places</button>
+    <button onclick="wrongChoice()">Swim in the dirty river</button>
+  </div>
+  <div id="gontseStep4" class="step">
+    <p>They choose a clean, safe place like a swimming pool or supervised area.</p>
+    <p>This helps avoid waterborne diseases and dangerous conditions.</p>
+    <button onclick="nextStep('gontseStep4', 'gontseStep5')">Next</button>
+  </div>
+  <div id="gontseStep5" class="step">
+    <p>Great choice! Staying healthy means making smart decisions every day.</p>
+    <p id="gontseDate"></p>
+    <button onclick="endStory()">Finish Story</button>
+  </div>
+</div>
+
+<div class="bottom-nav">
+      <p>&copy; 2025 HealthConnect. All rights reserved.</p>
+    </div>
+
+</div>
+  <script src="JavaScripts/Scenario.js"></script>
+
+  <script src="JavaScripts/GoogleLanguageTranslater.js"></script>
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  
+  <noscript>Your browser does not support JavaScript</noscript>
+
+</body>
+</html>
