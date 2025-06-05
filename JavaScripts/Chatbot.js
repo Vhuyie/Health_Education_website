@@ -1,10 +1,10 @@
-    function toggleMenu() {
-      document.getElementById("navButtons").classList.toggle("show");
-    }
+
+// Get references to DOM elements used in the chat
      const chatMessages = document.getElementById('chat-messages');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
 
+// Predefined health-related options and responses
     const healthOptions = [
       {
         title: "Weight Loss Diet Plan",
@@ -33,26 +33,38 @@
       }
     ];
 
+// Adds a message to the chat (either from user or bot)
     function addMessage(text, isUser) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message', isUser ? 'user-message' : 'bot-message');
+
+// Adds a timestamp to the message
     const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     messageDiv.innerHTML = `<div>${text.replace(/\n/g, "<br>")}</div><div class="timestamp">${timestamp}</div>`;
+
+// Append the message to the chat window        
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
-
+ 
+// Shows all predefined health options as clickable buttons
     function showOptions() {
       const optionsDiv = document.createElement('div');
       optionsDiv.classList.add('options-container');
+        
+// Create a button for each health option
       healthOptions.forEach(option => {
         const btn = document.createElement('button');
         btn.classList.add('option-btn');
         btn.textContent = option.title;
+
+// When an option is clicked, show the related response
         btn.onclick = () => {
-          addMessage(option.title, true);
+          addMessage(option.title, true);  // user message
           setTimeout(() => {
-            addMessage(option.response, false);
+            addMessage(option.response, false);  // bot reply
+
+// If the option includes a link, add a button for it
             if (option.link) {
               const linkBtn = document.createElement('button');
               linkBtn.classList.add('option-btn');
@@ -64,7 +76,7 @@
               chatMessages.appendChild(msg);
               chatMessages.scrollTop = chatMessages.scrollHeight;
             } else {
-              setTimeout(showOptions, 800);
+              setTimeout(showOptions, 800); // Show options again after reply
             }
           }, 700);
         };
@@ -77,11 +89,14 @@
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+// Handles sending a user message and generating a bot response
     function sendMessage() {
       const text = userInput.value.trim();
       if (text) {
-        addMessage(text, true);
-        userInput.value = '';
+        addMessage(text, true); // Add user message
+        userInput.value = '';  // Clear input
+
+// Respond to specific keywords          
         setTimeout(() => {
           if (text.toLowerCase().includes('hello')) {
             addMessage("Hello there! How can I assist you with your health today?", false);
@@ -95,11 +110,13 @@
       }
     }
 
+// Event listeners for send button and pressing Enter key
     sendBtn.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') sendMessage();
     });
 
+// Initial greeting and options shown on page load
     setTimeout(() => {
       addMessage("Hello! I'm your health assistant. How can I help you today? Here are some options:", false);
       showOptions();
